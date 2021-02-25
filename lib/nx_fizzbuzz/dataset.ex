@@ -6,12 +6,20 @@ defmodule NxFizzBuzz.Dataset do
       1..size
       |> Enum.map(fn _ -> Enum.random(0..max) end)
 
-    labels =
+    labels = randn |> Enum.map(&fizz_buzz/1)
+
+    feature =
       randn
-      |> Enum.map(&fizz_buzz/1)
+      |> Enum.map(fn n ->
+        1..127
+        |> Enum.reduce([n], fn m, acc ->
+          [rem(n, m) | acc]
+        end)
+        |> Enum.reverse()
+      end)
 
     {
-      Nx.tensor(randn, type: {:u, 32}),
+      Nx.tensor(feature, type: {:u, 32}),
       Nx.tensor(labels, type: {:u, 32})
     }
   end
