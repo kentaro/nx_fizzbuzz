@@ -1,4 +1,4 @@
-# NxFizzbuzz
+# NxFizzBuzz
 
 `FizzBuzz` problem got solved by deep learning!
 
