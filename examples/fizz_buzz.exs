@@ -1,7 +1,7 @@
-# generate dataset
+# generate a dataset
 {features, labels} = NxFizzBuzz.Dataset.generate_dataset(10000, 20)
 
-# train the data
+# train the model by the dataset
 params = NxFizzBuzz.Model.fit(features, labels, epoch: 100, batch_size: 50, hidden_size: 8)
 
 # predict answers
