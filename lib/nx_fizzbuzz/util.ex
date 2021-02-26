@@ -1,6 +1,14 @@
 defmodule NxFizzBuzz.Util do
-  def to_feature(nums, size, opts \\ []) do
-    opts = Keyword.put_new(opts, :type, {:u, 32})
+  def fizz_buzz(n) do
+    cond do
+      rem(n, 15) == 0 -> "FizzBuzz"
+      rem(n, 5) == 0 -> "Buzz"
+      rem(n, 3) == 0 -> "Fizz"
+      true -> n
+    end
+  end
+
+  def to_feature(nums, size) do
     nums
     |> Enum.map(fn n ->
       1..size
@@ -8,11 +16,12 @@ defmodule NxFizzBuzz.Util do
         [rem(n, m) | acc]
       end)
     end)
-    |> Nx.tensor(opts)
+    |> Nx.tensor()
+    |> Nx.divide(size)
   end
 
   def encode_label(n) when is_number(n) do
-    [n, 0, 0, 0]
+    [1, 0, 0, 0]
   end
 
   def encode_label("Fizz") do
@@ -25,5 +34,14 @@ defmodule NxFizzBuzz.Util do
 
   def encode_label("FizzBuzz") do
     [0, 0, 0, 1]
+  end
+
+  def decode_label(t, n) do
+    case Nx.to_scalar(Nx.argmax(t)) do
+      0 -> n
+      1 -> "Fizz"
+      2 -> "Buzz"
+      3 -> "FizzBuzz"
+    end
   end
 end
