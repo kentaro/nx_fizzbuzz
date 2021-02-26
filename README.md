@@ -1,6 +1,6 @@
 # NxFizzbuzz
 
-FizzBuzz got solved by deep learning!
+`FizzBuzz` problem got solved by deep learning!
 
 This repository shows an inductive programming demo using [Nx](https://github.com/elixir-nx/nx), a multi-dimensional tensors library for Elixir.
 
@@ -44,6 +44,8 @@ Executed in  487.17 secs   fish           external
    usr time  477.32 secs  126.00 micros  477.32 secs
    sys time   48.84 secs  688.00 micros   48.84 secs
 ```
+
+The result shown below is quite obvious because the dataset genearted by genuin `FizzBuzz` function are totally explanable deterministically. You have to notice it's a toy trial for an Nx demo ;)
 
 ## Acknowledgement
 
