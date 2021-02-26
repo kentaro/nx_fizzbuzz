@@ -23,7 +23,7 @@ end)
 
 ## Evaluation
 
-It took about 500 secs to train the model using 10,000 data and in 100 times epoch. Then 100% of accuracy got achieved.
+It took about 500 secs to train the model using 10,000 data in 100 times epochs. Then 100% of accuracy got achieved.
 
 For the experiment, I used MacBook Pro (2018) with 2.7 GHz Quad Cores Intel Core i7. EXLA was not enabled and no GPUs were used.
 

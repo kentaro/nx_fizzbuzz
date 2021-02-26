@@ -1,5 +1,5 @@
 defmodule NxFizzBuzz.Dataset do
-  def generate_dataset(dataset_size \\ 10000, feature_size \\ 128) do
+  def generate_dataset(dataset_size \\ 10000, feature_size \\ 20) do
     max = :math.pow(2, 32) |> round() |> Kernel.-(1)
 
     randn =
