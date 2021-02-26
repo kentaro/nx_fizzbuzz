@@ -45,7 +45,7 @@ Executed in  487.17 secs   fish           external
    sys time   48.84 secs  688.00 micros   48.84 secs
 ```
 
-The result shown below is quite obvious because the dataset genearted by genuin `FizzBuzz` function are totally explanable deterministically. You have to notice it's a toy trial for an Nx demo ;)
+The result shown above is quite obvious because the dataset genearted by genuin `FizzBuzz` function are totally explanable deterministically. You have to notice it's a toy trial for an Nx demo ;)
 
 ## Acknowledgement
 
