@@ -8,6 +8,8 @@ defmodule NxFizzBuzz.Util do
     end
   end
 
+  # Conduct a feature engineering because it's not interesting if we use the obvious
+  # nature of Fizz Buzz problem. So we do that as if we don't know Fizz Buzz well.
   def to_feature(nums, size) do
     nums
     |> Enum.map(fn n ->
