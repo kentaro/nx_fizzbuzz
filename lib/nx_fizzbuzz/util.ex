@@ -39,7 +39,7 @@ defmodule NxFizzBuzz.Util do
   end
 
   def decode_label(t, n) do
-    case Nx.to_scalar(Nx.argmax(t)) do
+    case Nx.to_number(Nx.argmax(t)) do
       0 -> n
       1 -> "Fizz"
       2 -> "Buzz"

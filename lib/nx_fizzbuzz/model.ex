@@ -50,7 +50,7 @@ defmodule NxFizzBuzz.Model do
   end
 
   defnp update({w1, b1, w2, b2} = params, x, y, opts \\ []) do
-    {grad_w1, grad_b1, grad_w2, grad_b2} = grad(params, loss(params, x, y))
+    {grad_w1, grad_b1, grad_w2, grad_b2} = grad(params, &loss(&1, x, y))
 
     {
       w1 - grad_w1 * opts[:learning_rate],
